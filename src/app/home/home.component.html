@@ -1,0 +1,160 @@
+<div class="body">
+<header id="header-top" class="header-top">
+<ul>
+  <li>
+    <div class="header-top-left">
+      <ul>
+        <li class="select-opt header-top-contact">
+            <a href="#">Home</a>
+        </li>
+        <li class="select-opt header-top-contact">
+          <a href="#">Kerala</a>
+      </li>
+      <li class="select-opt header-top-contact">
+        <a href="#">About</a>
+    </li>
+      </ul>
+    </div>
+  </li>
+  <li class="head-responsive-right pull-right">
+    <div class="header-top-right">
+      <ul>
+        <li class="header-top-contact">
+          <a routerLink="/login">SignUp</a>
+        </li>
+        <li class="header-top-contact">
+          <a routerLink="/signup">Singn Up</a>
+        </li>
+      </ul>
+    </div>
+  </li>
+</ul>
+
+</header>
+<section id="home" class="welcome-hero">
+<div>
+  <div class="welcome-hero-txt">
+    <h2>Kerala, <span>where emerald backwaters kiss golden shores, and lush green hills whisper tales of ancient lore.</span></h2>
+  </div>
+  <!-- <div class="welcome-hero-serch-box">
+    <div class="welcome-hero-form">
+      <div class="single-welcome-hero-form">
+        <h3>Search districts</h3>
+        <form action="index.html">
+          <input type="text" placeholder="Ex: Kannur, Kollam,Idukki "[(ngModel)]="searchText" name="searchText">
+        </form>
+        <div class="welcome-hero-form-icon">
+          <i class="flaticon-gps-fixed-indicator"></i>
+        </div>
+      </div>
+    </div>
+    <div class="welcome-hero-serch">
+      <button class="welcome-hero-btn" >
+         search
+      </button>
+    </div>
+  </div> -->
+</div>
+
+</section>
+<section id="list-topics" class="list-topics">
+<div>
+  <div class="list-topics-content">
+    <ul>
+      <li>
+        <div class="single-list-topics-content">
+          <div class="single-list-topics-icon">
+            <i class="bi bi-vector-pen"></i>
+          </div>
+          <h2><a href="#">വള്ളത്തോൾ നാരായണമേനോൻ</a></h2>
+          <p>"കേരളം, പരിശീലിച്ചു വരുന്ന നാടുമായി നിന്നും ഒരു പ്രണയത്തെക്കുറിച്ചു കാവ്യമായി"<br>.</p>
+        </div>
+      </li>
+      <li>
+        <div class="single-list-topics-content">
+          <div class="single-list-topics-icon">
+            <i class="bi bi-vector-pen"></i>
+          </div>
+          <h2><a href="#">കുമാരനാശാൻ</a></h2>
+          <p>"കേരളത്തിലെ സമുദ്രങ്ങളുടെ മധുരഗാനങ്ങൾ താമരയിൽ തീവ്രമായ ചന്ദ്രപ്രകാശത്തിൽ പ്രകടിപ്പിക്കുന്നു"</p>
+        </div>
+      </li>
+      <li>
+        <div class="single-list-topics-content">
+          <div class="single-list-topics-icon">
+            <i class="bi bi-vector-pen"></i>
+            <img src="">
+          </div>
+          <h2><a href="#">ഉള്ളൂർ എസ്. പരമേശ്വരന്‍ അയ്യര്‍</a></h2>
+          <p> "കേരളത്തിലെ പടയേറ്റകൾ, വൃക്ഷങ്ങളുടെ ശരാശരി ശതകം പടവാളിയിൽ ആയുധങ്ങൾ തയ്യാറാക്കുന്നു."</p>
+        </div>
+      <li>
+        <div class="single-list-topics-content">
+          <div class="single-list-topics-icon">
+            <i class="bi bi-vector-pen"></i>
+          </div>
+          <h2><a href="#">ചങ്ങമ്പുഴ കൃഷ്ണപിള്ള</a></h2>
+          <p> "കേരളത്തിലെ പ്രണയം, പട്ടിമകൾ മഴവിൽ മൂക്കുംനിന്നും സ്വപ്നങ്ങൾ നനഞ്ഞു.<br>.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+</section>
+<section id="works" class="works">
+<div>
+  <div class="section-header">
+    <h2>14 Districts of kerala</h2>
+    <p>Learn More about 14 districts of kerala</p>
+  </div>
+  <div class="works-content">
+    <div class="row">
+      <div class="row">
+        <div class="col-md-4 col-sm-6" *ngFor="let district of districts">
+          <div class="card card-effect" style="width: 18rem; height: 19rem; border: none;">
+            <img [src]="district.image" alt="{{ district.name }}" class="card-img-top" style="width: 500px; height: 200px;" (click)="openModal(district)">
+            <div class="card-body">
+              <h5 class="card-title">{{ district.name }}</h5>
+              <p class="card-text">{{ district.small_description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</section>
+<section id="statistics" class="statistics">
+<div>
+  <div class="statistics-counter "><p>Emerald state, so lush and grand,
+    With coconut trees that guard the land,
+    Kerala's beauty, wild and free,
+    A paradise by the Arabian Sea.</p>
+  </div>
+</div>
+
+</section>
+
+<footer id="footer" class="footer">
+<div class=>
+  <div class="hm-footer-copyright">
+    <div class="row">
+      <div class="col-sm-5">
+        <p>
+          ©copyright. designed and developed by thulasi.k
+        </p>
+      </div>
+      <div class="col-sm-7">
+        <div class="footer-social">
+          <span><i class="fa fa-phone"> +91  (111) 111 1111</i></span>
+          <span><i class="fa fa-globe"></i>www.k.com</span>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</footer>
+</div>
