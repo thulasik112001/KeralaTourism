@@ -11,7 +11,7 @@ import { FormsModule } from '@angular/forms';
     selector: 'app-home',
     standalone: true,
     templateUrl: './home.component.html',
-    styleUrl: './home.component.scss',
+    styleUrls: ['./home.component.scss', './hometwo.component.scss'],
     imports: [CommonModule, RouterLink, FilterPipe,FormsModule]
 })
 export class HomeComponent {

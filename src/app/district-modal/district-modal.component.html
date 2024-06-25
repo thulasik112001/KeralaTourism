@@ -10,7 +10,7 @@
   <h2>Places to visit</h2>
   <div class="d-flex flex-row flex-wrap">
     <div class="card" style="width: 13rem; margin-right: 1rem; border: none;" *ngFor="let place of district?.places_to_visit">
-      <img class="card-img-top" [src]="place.place_image" alt="Card image cap">
+      <img class="card-img-top" style="height:150px;" [src]="place.place_image" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">{{ place.name }}</h5>
         <p class="card-text">{{ place.description }}</p>
