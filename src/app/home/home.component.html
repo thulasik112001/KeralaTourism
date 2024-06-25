@@ -115,7 +115,7 @@
           <div class="card card-effect" style="width: 18rem; height: 19rem; border: none;">
             <img [src]="district.image" alt="{{ district.name }}" class="card-img-top" style="width: 500px; height: 200px;" (click)="openModal(district)">
             <div class="card-body">
-              <h5 class="card-title">{{ district.name }}</h5>
+              <h5 class="card-title" (click)="viewDistrictDetails(district.name)">{{ district.name }}</h5>
               <p class="card-text">{{ district.small_description }}</p>
             </div>
           </div>

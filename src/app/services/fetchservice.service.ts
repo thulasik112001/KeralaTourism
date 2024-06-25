@@ -5,11 +5,10 @@ import { Injectable, inject } from '@angular/core';
   providedIn: 'root'
 })
 export class FetchserviceService {
-  private apiUrl = 'https://star-butter-weaver.glitch.me/districts';
   private http=inject(HttpClient)
   constructor(){ }
-  async getdistricts(){
-    return this.http.get(this.apiUrl);
+  async getdistricts(url: string){
+    return this.http.get(url);
 
 }
 }

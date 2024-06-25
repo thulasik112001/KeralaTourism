@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { DistrictModalComponent } from '../district-modal/district-modal.component';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { FilterPipe } from "../pipe/filter.pipe";
@@ -21,6 +21,9 @@ export class HomeComponent {
   toFilter: any;
   filteredDistricts: any[] | undefined;
   searchText: any;
+
+  constructor(private router: Router) {}
+
   ngOnInit(): void {
     this.fetchDistricts();
   }
@@ -44,4 +47,7 @@ export class HomeComponent {
       modalRef.componentInstance.district = district;
     }
 
+    viewDistrictDetails(name: string){
+      this.router.navigate(['/districts', name]);
+    }
   }
